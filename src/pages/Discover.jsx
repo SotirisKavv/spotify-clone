@@ -1,10 +1,10 @@
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 
-import { Error, Loader, SongCard } from "../components";
-import { genres } from "../assets/constants";
-import { useState } from "react";
+import { useState } from 'react';
+import { Error, Loader, SongCard } from '../components';
+import { genres } from '../assets/constants';
 
-import { useGetTopChartsQuery } from "../redux/services/shazamCore";
+import { useGetTopChartsQuery } from '../redux/services/shazamCore';
 
 const Discover = () => {
   const { activeSong, isPlaying } = useSelector((state) => state.player);
