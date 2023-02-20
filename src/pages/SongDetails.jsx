@@ -1,12 +1,13 @@
+/* eslint-disable operator-linebreak */
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { DetailsHeader, Error, Loader, RelatedSongs } from '../components';
 
 import { setActiveSong, playPause } from '../redux/features/playerSlice';
 import {
-  useGetSongDetailsQuery,
   useGetSongRelatedQuery,
-} from '../redux/services/shazamCore';
+  useGetSongDetailsQuery,
+} from '../redux/services/shazamCoreV1';
 
 const SongDetails = () => {
   const dispatch = useDispatch();

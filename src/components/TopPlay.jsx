@@ -7,7 +7,7 @@ import { FreeMode } from 'swiper';
 
 import PlayPause from './PlayPause';
 import { playPause, setActiveSong } from '../redux/features/playerSlice';
-import { useGetTopChartsQuery } from '../redux/services/shazamCore';
+import { useGetTopChartsQuery } from '../redux/services/shazamCoreV1';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -83,7 +83,7 @@ const TopPlay = () => {
         <div className="mt-4 flex flex-col gap-1">
           {topPlays?.map((song, i) => (
             <TopPlayCard
-              key={song.name}
+              key={`${song.name}_${i}`}
               song={song}
               i={i}
               isPlaying={isPlaying}
@@ -111,9 +111,9 @@ const TopPlay = () => {
           modules={[FreeMode]}
           className="mt-4"
         >
-          {topPlays?.map((song) => (
+          {topPlays?.map((song, i) => (
             <SwiperSlide
-              key={song.name}
+              key={`${song.name}_${i}`}
               style={{ width: '25%', height: 'auto' }}
               className="shadow-lg rounded-full animate-slideright"
             >
