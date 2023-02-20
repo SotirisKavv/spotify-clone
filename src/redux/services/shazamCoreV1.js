@@ -1,7 +1,8 @@
+/* eslint-disable comma-dangle */
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-export const shazamCoreAPI = createApi({
-  reducerPath: 'shazamCoreApi',
+export const shazamCoreAPIv1 = createApi({
+  reducerPath: 'shazamCoreApiartistData1',
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://shazam-core.p.rapidapi.com/v1',
     prepareHeaders: (headers) => {
@@ -28,4 +29,4 @@ export const {
   useGetTopChartsQuery,
   useGetSongDetailsQuery,
   useGetSongRelatedQuery,
-} = shazamCoreAPI;
+} = shazamCoreAPIv1;

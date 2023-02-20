@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Error, Loader, SongCard } from '../components';
 import { genres } from '../assets/constants';
 
-import { useGetTopChartsQuery } from '../redux/services/shazamCore';
+import { useGetTopChartsQuery } from '../redux/services/shazamCoreV1';
 
 const Discover = () => {
   const { activeSong, isPlaying } = useSelector((state) => state.player);
